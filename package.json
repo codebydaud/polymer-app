@@ -17,5 +17,11 @@
     "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "bower": "^1.8.14",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.10"
   }
 }

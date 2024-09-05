@@ -9,7 +9,8 @@
   ],
   "sources": [
     "images/**/*",
-    "src/**/*"
+    "src/**/*",
+    "styles.css"
   ],
   "extraDependencies": [
     "bower_components/webcomponentsjs/*.js",
@@ -31,3 +32,5 @@
     }
   ]
 }
+
+
