@@ -4,6 +4,14 @@
   href="../bower_components/paper-checkbox/paper-checkbox.html"
 />
 
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+
+<!-- Include the bundled React component -->
+<script src="my-components.umd.js"></script>
+
+
 <dom-module id="my-view4">
   <template>
     <style include="shared-styles">
@@ -82,7 +90,8 @@
         </div>
         <div class="recipe-price-and-servings">
           <h1>Servings : {{item.servings}}</h1>
-          <button on-click="handleClick">Details</button>
+          <my-button name="Details"></my-button>
+          <!-- <button on-click="handleClick">Details</button> -->
         </div>
       </div>
     </template>

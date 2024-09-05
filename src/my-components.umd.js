@@ -41,13 +41,13 @@
       (o.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t));
     var s = o(883),
       i = o.n(s),
-      c = o(845),
-      a = o.n(c),
-      u = Object.defineProperty,
-      p = (e, t, n) => (
+      a = o(845),
+      c = o.n(a),
+      p = Object.defineProperty,
+      u = (e, t, n) => (
         ((e, t, n) => {
           t in e
-            ? u(e, t, {
+            ? p(e, t, {
                 enumerable: !0,
                 configurable: !0,
                 writable: !0,
@@ -95,35 +95,35 @@
       var r, o, s;
       t.props || (t.props = e.propTypes ? Object.keys(e.propTypes) : []);
       const i = Array.isArray(t.props) ? t.props.slice() : Object.keys(t.props),
-        c = {},
         a = {},
-        u = {};
+        c = {},
+        p = {};
       for (const e of i) {
-        c[e] = Array.isArray(t.props) ? "string" : t.props[e];
+        a[e] = Array.isArray(t.props) ? "string" : t.props[e];
         const n = f(e);
-        (a[e] = n), (u[n] = e);
+        (c[e] = n), (p[n] = e);
       }
       class y extends HTMLElement {
         constructor() {
           super(),
-            p(this, r, !0),
-            p(this, o),
-            p(this, s, {}),
-            p(this, "container"),
+            u(this, r, !0),
+            u(this, o),
+            u(this, s, {}),
+            u(this, "container"),
             t.shadow
               ? (this.container = this.attachShadow({ mode: t.shadow }))
               : (this.container = this),
             (this[b].container = this.container);
           for (const e of i) {
-            const t = a[e],
+            const t = c[e],
               n = this.getAttribute(t),
-              r = c[e],
+              r = a[e],
               o = r ? l[r] : null;
             null != o && o.parse && n && (this[b][e] = o.parse(n, t, this));
           }
         }
         static get observedAttributes() {
-          return Object.keys(u);
+          return Object.keys(p);
         }
         connectedCallback() {
           (this[h] = !0), this[d]();
@@ -132,10 +132,10 @@
           (this[h] = !1), this[m] && n.unmount(this[m]), delete this[m];
         }
         attributeChangedCallback(e, t, n) {
-          const r = u[e],
-            o = c[r],
+          const r = p[e],
+            o = a[r],
             s = o ? l[o] : null;
-          r in c &&
+          r in a &&
             null != s &&
             s.parse &&
             n &&
@@ -149,8 +149,8 @@
         }
       }
       for (const e of i) {
-        const t = a[e],
-          n = c[e];
+        const t = c[e],
+          n = a[e];
         Object.defineProperty(y.prototype, e, {
           enumerable: !0,
           configurable: !0,
@@ -202,13 +202,15 @@
         return i().createElement(
           "button",
           { onClick: () => alert("Button clicked!") },
-          "Click me"
+          this.props.name
         );
       }
     }
+    const x = g(w, i(), c(), { props: ["name"] }),
+      O = g(v, i(), c(), { props: ["name"] });
     return (
-      customElements.define("hello-world", g(w, i(), a())),
-      customElements.define("my-button", g(v, i(), a())),
+      customElements.define("hello-world", x),
+      customElements.define("my-button", O),
       {}
     );
   })()
