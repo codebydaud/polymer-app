@@ -41,8 +41,8 @@
       (o.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t));
     var s = o(883),
       i = o.n(s),
-      a = o(845),
-      c = o.n(a),
+      c = o(845),
+      a = o.n(c),
       p = Object.defineProperty,
       u = (e, t, n) => (
         ((e, t, n) => {
@@ -95,13 +95,13 @@
       var r, o, s;
       t.props || (t.props = e.propTypes ? Object.keys(e.propTypes) : []);
       const i = Array.isArray(t.props) ? t.props.slice() : Object.keys(t.props),
-        a = {},
         c = {},
+        a = {},
         p = {};
       for (const e of i) {
-        a[e] = Array.isArray(t.props) ? "string" : t.props[e];
+        c[e] = Array.isArray(t.props) ? "string" : t.props[e];
         const n = f(e);
-        (c[e] = n), (p[n] = e);
+        (a[e] = n), (p[n] = e);
       }
       class y extends HTMLElement {
         constructor() {
@@ -115,9 +115,9 @@
               : (this.container = this),
             (this[b].container = this.container);
           for (const e of i) {
-            const t = c[e],
+            const t = a[e],
               n = this.getAttribute(t),
-              r = a[e],
+              r = c[e],
               o = r ? l[r] : null;
             null != o && o.parse && n && (this[b][e] = o.parse(n, t, this));
           }
@@ -133,9 +133,9 @@
         }
         attributeChangedCallback(e, t, n) {
           const r = p[e],
-            o = a[r],
+            o = c[r],
             s = o ? l[o] : null;
-          r in a &&
+          r in c &&
             null != s &&
             s.parse &&
             n &&
@@ -149,8 +149,8 @@
         }
       }
       for (const e of i) {
-        const t = c[e],
-          n = a[e];
+        const t = a[e],
+          n = c[e];
         Object.defineProperty(y.prototype, e, {
           enumerable: !0,
           configurable: !0,
@@ -197,7 +197,8 @@
         return i().createElement("div", null, "Hello, ", this.props.name, "!");
       }
     }
-    class v extends i().Component {
+    const v = w;
+    class x extends i().Component {
       render() {
         return i().createElement(
           "button",
@@ -206,11 +207,12 @@
         );
       }
     }
-    const x = g(w, i(), c(), { props: ["name"] }),
-      O = g(v, i(), c(), { props: ["name"] });
+    const O = x,
+      R = g(v, i(), a(), { props: ["name"] }),
+      C = g(O, i(), a(), { props: ["name"] });
     return (
-      customElements.define("hello-world", x),
-      customElements.define("my-button", O),
+      customElements.define("hello-world", R),
+      customElements.define("my-button", C),
       {}
     );
   })()
