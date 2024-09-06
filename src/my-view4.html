@@ -1,15 +1,12 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html" />
-<link
-  rel="import"
-  href="../bower_components/paper-checkbox/paper-checkbox.html"
-/>
 
 <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/gh/codebydaud/react-components-host/daud/my-components-5.umd.js"></script>
 
-<!-- Include the bundled React component -->
-<script src="my-components.umd.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css">
 
 
 <dom-module id="my-view4">
@@ -57,7 +54,7 @@
         font-size: 80%;
         color: #06bb60; /* Example color for status */
       }
-      button {
+      /* button {
         background-color: #06bb60;
         color: white;
         padding: 5px 5px;
@@ -69,7 +66,7 @@
 
       button:hover {
         background-color: #05964d;
-      }
+      } */
     </style>
     <template is="dom-repeat" items="{{recipes}}">
       <div class="card">
@@ -91,10 +88,11 @@
         <div class="recipe-price-and-servings">
           <h1>Servings : {{item.servings}}</h1>
           <my-button name="Details"></my-button>
-          <!-- <button on-click="handleClick">Details</button> -->
         </div>
-        
+        <hello-world name="Daud"></hello-world>
+        <my-button name="Details"></my-button>
       </div>
+      <!-- <hello-world name="daud"></hello-world> -->
     </template>
   </template>
   <script>
