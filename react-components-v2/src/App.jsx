@@ -1,6 +1,6 @@
 import './App.css'
-// import MyButton from './components/MyButton'
-// import HelloWorld from './components/HelloWorld'
+import MyButton from './components/MyButton'
+import HelloWorld from './components/HelloWorld'
 
 function App() {
   return (
