@@ -3,14 +3,18 @@
 <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/codebydaud/react-components-host/daud/my-components-6.umd.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/codebydaud/react-components-host/daud/my-components.umd.js"></script> -->
 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css">
-
+<script src="my-components.umd.js"></script>
 
 <dom-module id="my-view4">
   <template>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
     <style include="shared-styles">
       :host {
         display: block;
@@ -72,10 +76,7 @@
       <div class="card">
         <div class="circle">{{item.dealName}}</div>
         <div class="image-container">
-          <img
-            src="{{item.imageUrl}}"
-            alt="Description of the image"
-          />
+          <img src="{{item.imageUrl}}" alt="Description of the image" />
         </div>
         <div class="recipe-title">
           <h1>{{item.title}}</h1>
@@ -89,8 +90,6 @@
           <h1>Servings : {{item.servings}}</h1>
           <my-button name="Details"></my-button>
         </div>
-        <hello-world name="Daud"></hello-world>
-        <my-button name="Details"></my-button>
       </div>
       <!-- <hello-world name="daud"></hello-world> -->
     </template>
@@ -101,7 +100,7 @@
         return "my-view4";
       }
       handleClick() {
-        console.log('Button clicked!');
+        console.log("Button clicked!");
       }
       static get properties() {
         return {
