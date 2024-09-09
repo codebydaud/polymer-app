@@ -23,5 +23,15 @@
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/codebydaud/polymer-app",
+  "description": "",
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
