@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyButton = () => {
-  return <button id='button' onClick={() => alert('Button clicked!')}>Click me</button>;
+  return <button className='btn btn-success' onClick={() => alert('Button clicked!')}>Click me</button>;
 };
 
 export default MyButton;

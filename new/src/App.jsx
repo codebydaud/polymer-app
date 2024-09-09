@@ -1,22 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MyButton from './components/MyButton'
-import HelloWorld from './components/HelloWorld'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; 
+
+import MyButton from "./components/MyButton";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className='text-blue-600'>Hello Vite + React!</p>
-        <HelloWorld />
-        <MyButton />
-      </header>
-    </div>
+
+    <div className="dropdown">
+	  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		Dropdown button
+	  </button>
+	  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+		<li><a className="dropdown-item" href="#">Action</a></li>
+		<li><a className="dropdown-item" href="#">Another action</a></li>
+		<li><a className="dropdown-item" href="#">Something else here</a></li>
+	  </ul>
+	</div>
+
   );
 }
 
-export default App
-
-
+export default App;

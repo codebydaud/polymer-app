@@ -1,23 +1,30 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
+
 
 export default defineConfig({
   plugins: [react(), nodePolyfills()],
   build: {
     lib: {
-      entry: "./src/index.js",
-      name: "MyComponents",
+      entry: './src/index.js',
+      name: 'MyComponents',
       fileName: (format) => `my-components.${format}.js`,
-      formats: ["umd"],
+      formats: ['umd'],
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
+          react: 'React',
+          'react-dom': 'ReactDOM',
         },
+        // assetFileNames: (assetInfo) => {
+        //   if (assetInfo.name.endsWith('.css')) {
+        //     return 'styles/[name][extname]';
+        //   }
+        //   return '[name][extname]';
+        // },
       },
     },
   },
